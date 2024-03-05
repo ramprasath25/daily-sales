@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruvvers Daily Sales</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='images/Bruvvers.png') }}" width="400px" />
+    <table class="top-banner">
+      <tr>
+        <td>
+          <button class="btn-style" onclick="window.location.reload();">Refresh</button>
+        </td>
+        <td>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" disabled style="height: 35px;">
+        </td>
+        <td>
+          <label for="date">Online Sales:</label>
+          <input type="number" min="0" id="online" disabled style="height: 35px;">
+        </td>
+        <td style="text-align: end;">
+          <button id="editBtn" onclick="toggleEdit()" class="btn-style">Modify</button>
+          <button id="saveBtn" class="hide btn-style" onclick="saveChanges()">Save</button>
+        </td>
+      </tr>
+    </table>
+    <div id="productList" class="product-list"></div>
+    <div id="sale_total_sold" class="item-total"></div>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
