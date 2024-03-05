@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: bruvvers     
+      POSTGRES_USER: bruvvers_admin   
+      POSTGRES_PASSWORD: bruvvers_2024  
+    ports:
+      - "5432:5432"   # Expose PostgreSQL port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

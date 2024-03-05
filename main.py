@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Replace the connection string below with your PostgreSQL connection string
-SQLALCHEMY_DATABASE_URL = "postgresql://kong:kong@localhost:5432/bruvvers"
+SQLALCHEMY_DATABASE_URL = "postgresql://bruvvers_admin:bruvvers_2024@localhost:5432/bruvvers"
 
 # SQLAlchemy setup
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
